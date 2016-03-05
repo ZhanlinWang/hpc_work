@@ -1,8 +1,14 @@
 #!/bin/python
 from numpy import *
-x = 2.
+x = 100.
 s = 1.
-for k in range(6):
+kmax = 100
+tol = 1.e-14
+for k in range(kmax):
 	print "Before iteration %s, s = %s" % (k,s)
+	s0 = s
 	s = 0.5 * (s + x/s)
+	delta_s = s - s0
+	if abs(delta_s/x) < tol:
+		break
 print "After %s iteration, s=%s" % (k+1,s)
