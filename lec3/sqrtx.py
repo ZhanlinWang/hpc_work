@@ -1,8 +1,15 @@
 #!/bin/python
+'''
+Module for approximating sqrt.
+More ...
+'''
+'Why not come here'
 from numpy import *
 x = 100.
-
 def sqrt2(x):
+	'''
+	more details
+	'''
 	s = 1.
 	kmax = 100
 	tol = 1.e-14
