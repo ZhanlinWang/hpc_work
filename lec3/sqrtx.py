@@ -4,12 +4,19 @@ Module for approximating sqrt.
 More ...
 '''
 'Why not come here'
-from numpy import *
 x = 100.
 def sqrt2(x):
 	'''
 	more details
 	'''
+	from numpy import nan
+
+	if x==0:
+		return 0.
+	elif x<0:
+		print "*** Error, x must be nonnegative."
+		return nan
+	assert x>0. and type(x) is float, "Unrecognized input"
 	s = 1.
 	kmax = 100
 	tol = 1.e-14
